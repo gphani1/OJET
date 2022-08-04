@@ -1,0 +1,41 @@
+<div class="oj-hybrid-padding">
+
+    <oj-form-layout id="formLayoutOptions" max-columns="1" direction="row" label-edge="start">
+        <oj-label show-required for="input-title">Title</oj-label>
+        <oj-input-text id="input-title" value="{{inputtitleValue}}"></oj-input-text>
+        <oj-label show-required for="input-id">ID</oj-label>
+        <oj-input-text id="input-id" value="{{inputidValue}}"></oj-input-text>
+        <oj-label show-required for="input-branch">Cycle the Branch</oj-label>
+        <oj-radioset id="input-branch" labelled-by="radiosetlabel" options="{{branchopt}}" value="{{radiobranchValues}}"
+            class="oj-choice-direction-row">
+        </oj-radioset>
+        <!-- <oj-label for="cyclecount"  >Count of Cycles</oj-label> -->
+
+        <oj-input-number id="input-cycleCount" label-hint="Count of cycles" class="oj-form-control-max-width-md"
+            value="{{inputCountValue}}" min="0" max="25" step="1"></oj-input-number>
+        <oj-label show-required for="input-subjects">Assign Subjects using</oj-label>
+        <oj-checkboxset id="input-subjects" labelled-by="checkboxsetlabel" options="{{subjectopt}}"
+            value='{{subjectValue}}' class="oj-choice-direction-row">
+        </oj-checkboxset>
+
+        <h6> Form Question Settings</h6>
+
+        <oj-label show-required for="inputselectform">Form</oj-label>
+        <oj-select-single id="inputselectform" data="[[formopt]]" value="readings"></oj-select-single>
+        <oj-label show-required for="inputselectquestion">Question</oj-label>
+        <oj-select-single id="inputselectquestion" data="[[questionopt]]" value="ill"></oj-select-single>
+        <oj-label show-required for="inputselectanswer">Answer</oj-label>
+        <oj-select-single id="inputselectanswer" data="[[answeropt]]" value="yes"></oj-select-single>
+        <oj-label show-required for="inputselectvisit">Visit</oj-label>
+        <oj-select-single id="inputselectvisit" data="[[visitopt]]" value="select"></oj-select-single>
+    </oj-form-layout>
+
+    <div>
+        <oj-button id="cancel" on-oj-action="[[cancel]]" class="oj-button-sm">Cancel</oj-button>
+        <oj-button id="saveanother" on-oj-action="[[saveanother]]" class="oj-button-sm">Save & Add Another </oj-button>
+        <oj-button id="save" on-oj-action="[[save]]" class="oj-button-sm ">Save</oj-button>
+    </div>
+
+
+
+</div>

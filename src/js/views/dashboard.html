@@ -1,0 +1,18 @@
+<!--
+ Copyright (c) 2014, 2022, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<div class="oj-hybrid-padding">
+ <oj-form-layout id="ojformlayout" >
+  <oj-input-text id="inputUserName" label-hint="User Name" value="{{inputusernameValue}}"></oj-input-text>
+  <oj-input-password id="inputpwd" label-hint=" Password" value="{{inputPassword}}"></oj-input-password>
+  <oj-select-single id="selectSingle" value="{{selectedvalue}}" data="[[selectedlist]]" label-hint="Admin/User"></oj-select-single>
+  <div>
+    <oj-button id="signin" on-oj-action="[[signIn]]"  class="oj-button-sm">Sign In</oj-button>
+    <a href="#" class="oj-link-standalone">Forgot Password</a>
+    <a href="http://localhost:8000/?ojr=register" class="oj-link-standalone" >Register</a>
+  </div>
+  
+ </oj-form-layout>
+</div>

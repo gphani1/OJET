@@ -1,0 +1,11 @@
+<div class="oj-hybrid-padding">
+    <oj-form-layout id="ojformlayout" >
+        <oj-input-text id="inputUserName" label-hint="User Name" value="{{inputusernameValue}}"></oj-input-text>
+        <oj-input-text id="email" label-hint="Email" value="{{inputemailValue}}"></oj-input-text>
+        <oj-input-password id="inputpwd" label-hint=" Password" value="{{inputPassword}}"></oj-input-password>
+        <oj-input-password id="inputconfirmpwd" label-hint="Confirm Password" value="{{inputConfirmPassword}}"></oj-input-password>
+        <oj-select-single id="selectSingle" value="{{selectedvalue}}" data="[[selectedlist]]" label-hint="Admin/User"></oj-select-single>
+        <oj-button id="signup" on-oj-action="[[signUp]]" chroming="outlined" class="oj-button-sm">Sign Up</oj-button>
+        
+    </oj-form-layout>
+</div>
