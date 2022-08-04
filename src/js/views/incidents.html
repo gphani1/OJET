@@ -1,0 +1,81 @@
+<!--
+ Copyright (c) 2014, 2022, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+
+<!----Role as User-->
+<div class="oj-hybrid-padding">
+  <oj-form-layout max-columns="1" direction="row" label-edge="start">
+    <oj-label-value label-edge="start" label-width="30%">
+      <oj-label slot="label" for="datepicker" show-required>Visit Date</oj-label>
+      <oj-input-date slot="value" id="datepicker" value="{{dateValue}}" autocomplete="off"
+        class="oj-form-control-max-width-sm"></oj-input-date>
+    </oj-label-value>
+
+    <!-- <h6 class="oj-typography-heading-xs">Screening</h6> -->
+
+    <oj-label-value label-edge="start" label-width="30%">
+      <oj-label slot="label" for="initials" show-required>Subject initials</oj-label>
+      <oj-input-text slot="value" id="initials" value="{{inputInitialsValue}}" class="oj-form-control-max-width-sm">
+      </oj-input-text>
+    </oj-label-value>
+
+    <oj-label-value label-edge="start" label-width="30%">
+      <oj-label slot="label" for="weight" show-required>Subject Weight</oj-label>
+      <oj-input-text slot="value" id="weight" value="{{inputweightValue}}" class="oj-form-control-max-width-sm">
+      </oj-input-text>
+    </oj-label-value>
+
+    <oj-label-value label-edge="start" label-width="30%">
+      <oj-label slot="label" for="datemedication" show-required>Date when subject has taken the last medication</oj-label>
+      <oj-input-date-time slot="value" id="datemedication" value="{{inputdatemedicationValue}}"
+        class="oj-form-control-max-width-sm"></oj-input-date-time>
+    </oj-label-value>
+
+    <oj-label-value label-edge="start" label-width="30%">
+      <oj-label slot="label" for="gender" show-required>Gender</oj-label>
+      <oj-input-text slot="value" id="gender" value="{{inputgenderValue}}" class="oj-form-control-max-width-sm">
+      </oj-input-text>
+    </oj-label-value>
+
+    <!-- <oj-label-value label-edge="start" label-width="30%">
+    <oj-label slot="label" >Age</oj-label>
+    <oj-label-value label-edge="top" label-width="30%">
+      <oj-label slot="label" for="birth">Date of Birth</oj-label>
+      <oj-input-date slot="value" id="birth"  value="{{inputbirthValue}}">DD-MM-YYYY HH:MM</oj-input-text>   
+    </oj-label-value>
+    <oj-label-value label-edge="top" label-width="30%">
+      <oj-label slot="label" for="age" >Age</oj-label>
+      <oj-input-date slot="value" id="age"  value="{{inputageValue}}">--</oj-input-text>   
+    </oj-label-value>
+  </oj-label-value> -->
+    <oj-form-layout  >
+      <!-- <oj-label-value> </oj-label-value> -->
+      <oj-label label-id="grouplabelid" show-required>Age</oj-label>
+      <oj-form-layout label-edge="top"  >
+        <oj-label for="birthdate">Date of Birth</oj-label>
+        <oj-input-date-time id="birthdate" class="oj-form-control-max-width-sm"></oj-input-date-time>
+        <oj-label for="birthage">Age</oj-label>
+        <oj-input-text id="birthage" class="oj-form-control-max-width-sm"></oj-input-text>
+      </oj-form-layout>
+     
+    </oj-form-layout>
+
+    <oj-label-value label-edge="start" >
+      <oj-label slot="label" id="checkboxsetlabel" show-required>Any Symptoms</oj-label>
+      <oj-checkboxset slot="value" id="checkboxSetId" labelled-by="checkboxsetlabel" options="{{symptomopt}}"
+        value='{{symptomValue}}' class="oj-choice-direction-column">
+      </oj-checkboxset>
+    </oj-label-value>
+
+    <oj-label-value label-edge="start" label-width="30%">
+      <oj-label slot="label" id="radiosetlabel" show-required>Have undergone surgery earlier</oj-label>
+      <oj-radioset slot="value" id="radioSetId" labelled-by="radiosetlabel" options="{{surgeryopt}}"
+        value="{{radiosurgeryValues}}" class="oj-choice-direction-column">
+      </oj-radioset>
+    </oj-label-value>
+
+    <oj-button id="submit" on-oj-action="[[submit]]"  class="oj-button-sm">Submit</oj-button>
+  </oj-form-layout>
+</div>

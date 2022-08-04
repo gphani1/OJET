@@ -1,0 +1,34 @@
+<div class="oj-hybrid-padding">
+    <oj-form-layout direction="row" max-columns="3" class=" oj-flex  oj-sm-justify-content-flex-end ">
+  
+      <span>
+        <oj-select-single id="selecttype" label-hint="Filter by type" label-edge="inside"
+          class="oj-form-control-max-width-sm " data="[[filteropt]]" value="{{selectVal}}"></oj-select-single>
+      </span>
+      <span>
+        <oj-select-single id="selectstatus" label-hint="Filter by status" label-edge="inside"
+          class="oj-form-control-max-width-sm" data="[[statusopt]]" value="{{statusVal}}"></oj-select-single>
+      </span>
+      <span>
+        <oj-input-search id="search1" class="oj-form-control-max-width-sm" value="{{value}}"
+          on-oj-value-action="[[handleValueAction]]" placeholder="Search" aria-label="My search field">
+  
+        </oj-input-search>
+      </span>
+  
+      <!-- </oj-form-layout>
+   <div class="oj-flex   " >
+    <div class="oj-flex-item oj-panel  oj-lg-padding-4x-horizontal oj-lg-only-width-1/3">2-1</div>
+    <div class="oj-flex-item oj-panel  oj-lg-padding-4x-horizontal ">2-2</div> -->
+  
+  </div>
+  <div class="oj-panel">
+    <oj-table
+    id="table" aria-label="study Table" accessibility.row-header="typeId" class="demo-table-container"
+    data="[[dataprovider]]" columns-default.sortable="disabled" scroll-policy="loadMoreOnScroll"
+    columns="{{tableColumns}}" scroll-policy-options='{"fetchSize": 100}' >
+    </oj-table>
+  </div>
+  
+  
+  </div>

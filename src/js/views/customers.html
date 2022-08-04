@@ -1,0 +1,38 @@
+<!--
+ Copyright (c) 2014, 2022, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<div class="oj-hybrid-padding">
+  <div>
+    <oj-menu-button  chroming="solid" class="oj-button-sm" >
+      <span>
+        <!-- <oj-bind-text value="[[currentChromingLabel]]"></oj-bind-text> -->
+        Create Kit Type
+      </span>
+      <oj-menu slot="menu">
+        <oj-bind-for-each data="[[menuItems]]">
+          <template>
+            <oj-option value="[[$current.data.label]]"  :id="[[$current.data.id]]">
+              <oj-bind-if test="[[$current.data.icon]]">
+                <span slot="startIcon" :class="[[$current.data.icon]]"></span>
+              </oj-bind-if>
+              <oj-bind-text value="[[$current.data.label]]"></oj-bind-text>
+            </oj-option>
+          </template>
+        </oj-bind-for-each>
+      </oj-menu>
+    </oj-menu-button>
+
+    <oj-button  chroming="solid" class="oj-button-sm">
+      <span>
+        Create Kit Type Titration
+      </span>
+    </oj-button>
+  </div>
+  <div>
+
+  </div>
+
+
+</div>

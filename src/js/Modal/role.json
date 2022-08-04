@@ -1,0 +1,74 @@
+[
+    {
+        "role":"Template CRA",
+        "Type":"Sponsor"
+    },
+    {
+        "role":"Template Clinical Supply manager",
+        "Type":"Sponser"
+    },
+    {
+        "role":"Template Data manager",
+        "Type":"Sponser"
+    },
+    {
+        "role":"Template Medical monitor",
+        "Type":"Sponser"
+    },
+    {
+        "role":"Template Pharmacy user",
+        "Type":"Site"
+    },
+    {
+        "role":"Template Production Admin",
+        "Type":"Sponser"
+    },
+    {
+        "role":"Template-Rules Designer",
+        "Type":"Sponser"
+    },
+    {
+        "role":"Template-Site Administrator",
+        "Type":"Sponser"
+    },
+    {
+        "role":"Template-Site User",
+        "Type":"Site"
+    },
+    {
+        "role":"Template-Statistician",
+        "Type":"Sponser"
+    },
+    {
+        "role":"Template-Study Designer",
+        "Type":"Design"
+    },
+    {
+        "role":"Template CRA",
+        "Type":"Sponser"
+    },
+    {
+        "role":"Template CRA",
+        "Type":"Design"
+    },
+    {
+        "role":"Template CRA",
+        "Type":"Sponser"
+    },
+    {
+        "role":"Template CRA",
+        "Type":"Sponser"
+    },
+    {
+        "role":"Template CRA",
+        "Type":"Sponser"
+    },
+    {
+        "role":"Template CRA",
+        "Type":"Sponser"
+    },
+    {
+        "role":"Template CRA",
+        "Type":"Sponser"
+    }
+]
