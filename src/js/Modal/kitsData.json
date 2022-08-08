@@ -1,0 +1,56 @@
+[
+    {
+        "id":"1",
+        "Distribution":"Unblinded",
+        "Description":"Kit A Description",
+        "Storage":"Ambient (15-25c)",
+        "Type":"Bottle",
+        "MinkitstoShip":1,
+        "Unitsperkit":1
+    },
+    {
+        "id":"2",
+        "Distribution":"Unblinded",
+        "Description":"Kit A Description",
+        "Storage":"Ambient (15-25c)",
+        "Type":"Bottle",
+        "MinkitstoShip":1,
+        "Unitsperkit":1
+    },
+    {
+        "id":"3",
+        "Distribution":"Unblinded",
+        "Description":"Kit A Description",
+        "Storage":"Ambient (15-25c)",
+        "Type":"Bottle",
+        "MinkitstoShip":1,
+        "Unitsperkit":1
+    },
+    {
+        "id":"4",
+        "Distribution":"Blinded",
+        "Description":"Kit B Description",
+        "Storage":"Ambient (15-25c)",
+        "Type":"Bottle",
+        "MinkitstoShip":1,
+        "Unitsperkit":1
+    },
+    {
+        "id":"5",
+        "Distribution":"Unblinded",
+        "Description":"Kit A Description",
+        "Storage":"Ambient (15-25c)",
+        "Type":"Bottle",
+        "MinkitstoShip":1,
+        "Unitsperkit":1
+    },
+    {
+        "id":"6",
+        "Distribution":"Unblinded",
+        "Description":"Kit A Description",
+        "Storage":"Ambient (15-25c)",
+        "Type":"Bottle",
+        "MinkitstoShip":1,
+        "Unitsperkit":1
+    }
+]

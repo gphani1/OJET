@@ -1,6 +1,6 @@
-define(['../accUtils',"require", "exports", "knockout", "ojs/ojbootstrap","text!../Modal/role.json","ojs/ojarraydataprovider","ojs/ojknockout","ojs/ojinputtext",'ojs/ojlabel','ojs/ojformlayout',
+define(["require", "exports", "knockout", "ojs/ojbootstrap","text!../../Modal/role.json","ojs/ojarraydataprovider","ojs/ojknockout","ojs/ojinputtext",'ojs/ojlabel','ojs/ojformlayout',
 "ojs/ojdatetimepicker","ojs/ojradioset","ojs/ojcheckboxset",'ojs/ojbutton',"ojs/ojtable","ojs/ojinputnumber",'ojs/ojselectsingle', "ojs/ojinputsearch"],
- function(accUtils,require, exports, ko, Bootstrap,roleData,ArrayDataProvider) {
+ function(require, exports, ko, Bootstrap,roleData,ArrayDataProvider) {
     function RoleViewModel() {
     
       this.roleArray = JSON.parse(roleData);
@@ -87,26 +87,26 @@ define(['../accUtils',"require", "exports", "knockout", "ojs/ojbootstrap","text!
        * and inserted into the DOM and after the View is reconnected
        * after being disconnected.
        */
-      this.connected = () => {
-        accUtils.announce('Customers page loaded.', 'assertive');
-        document.title = "Customers";
-        // Implement further logic if needed
-      };
+      // this.connected = () => {
+      //   accUtils.announce('Customers page loaded.', 'assertive');
+      //   document.title = "Customers";
+      //   // Implement further logic if needed
+      // };
 
       /**
        * Optional ViewModel method invoked after the View is disconnected from the DOM.
        */
-      this.disconnected = () => {
-        // Implement if needed
-      };
+      // this.disconnected = () => {
+      //   // Implement if needed
+      // };
 
       /**
        * Optional ViewModel method invoked after transition to the new View is complete.
        * That includes any possible animation between the old and the new View.
        */
-      this.transitionCompleted = () => {
-        // Implement if needed
-      };
+      // this.transitionCompleted = () => {
+      //   // Implement if needed
+      // };
     }
 
     /*

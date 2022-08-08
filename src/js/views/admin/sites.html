@@ -1,0 +1,171 @@
+<!--
+ Copyright (c) 2014, 2022, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+ <div class="oj-hybrid-padding">
+    <div id="train-container" class="oj-sm-margin-2x">
+      <div class="demo-default-train-container oj-helper-text-align-center">
+  
+        <oj-train id="train" class="oj-train-stretch" selected-step="{{selectedStepValue}}" steps="[[stepArray]]"
+          class="oj-sm-margin-20x"></oj-train>
+      </div>
+      <!-- <div class="oj-sm-margin-4x-vertical">
+        <h3 class="oj-header-border">
+          <oj-bind-text value="[[selectedStepLabel()]]"></oj-bind-text>
+        </h3>
+      </div> -->
+  
+      <!-- <oj-label label-id="grouplabelid">
+        <oj-bind-text value="[[selectedStepFormLabel()]]"></oj-bind-text>
+      </oj-label> -->
+      <oj-validation-group id="tracker" role="group">
+        <oj-bind-if test="[[selectedStepValue() === 'stp1']]">
+          <oj-form-layout id="fl1" readonly="[[isFormReadonly()]]" max-columns="1" direction="row" label-edge="start"
+          class="oj-sm-margin-10x-horizontal">
+            <oj-input-search id="search1" class="oj-form-control-max-width-md" placeholder="Search by Name PI or Address"
+              aria-label="My search field"></oj-input-search>
+  
+            <oj-label for="input-prefix">Principle investigator (PI) prefix</oj-label>
+            <oj-input-text id="input-prefix" value="{{inputprefixValue}}"></oj-input-text>
+            <oj-label for="input-firstName">PI First Name</oj-label>
+            <oj-input-text id="input-firstName" value="{{inputfirstNameValue}}"></oj-input-text>
+            <oj-label show-required for="input-lastName">PI Last Name</oj-label>
+            <oj-input-text id="input-lastName" value="{{inputlastNameValue}}"></oj-input-text>
+            <oj-label show-required for="input-siteName">Site Name</oj-label>
+            <oj-input-text id="input-siteName" value="{{inputsiteNameValue}}"></oj-input-text>
+            <oj-label show-required for="input-siteId">Site ID</oj-label>
+            <oj-input-text id="input-siteId" value="{{inputsiteIdValue}}"></oj-input-text>
+            <oj-label show-required for="input-status">Status</oj-label>
+            <oj-select-single id="input-status" data="[[statusopt]]" value="new"></oj-select-single>
+            <oj-label show-required for="input-mode">Mode</oj-label>
+            <oj-select-many id="input-mode" value="{{modeValue}}" options="[[modeopt]]"
+              class="oj-form-control-max-width-md"></oj-select-many>
+            <oj-label show-required for="input-drug">Drug Destruction Capable</oj-label>
+            <oj-radioset id="input-drug" labelled-by="radiosetlabel" options="{{drugopt}}" value="{{radiodrugValues}}"
+              class="oj-choice-direction-row ">
+            </oj-radioset>
+            <oj-form-layout max-columns="2" direction="row" >
+              <oj-label for="input-dea">DEA Number</oj-label>
+              <oj-input-text id="input-dea" value="{{deaValue}}"></oj-input-text>
+              <oj-label for="input-expire">Expiration</oj-label>
+              <oj-input-date label-hint="DD-MON-YY"></oj-input-date>
+            </oj-form-layout>
+          </oj-form-layout>
+        </oj-bind-if>
+  
+        <oj-bind-if test="[[selectedStepValue() === 'stp2']]">
+          <oj-form-layout id="fl2" readonly="[[isFormReadonly()]]" max-columns="1" direction="row" label-edge="start">
+            <oj-label for="input-add1" show-required>Address 1</oj-label>
+            <oj-input-text id="input-add1" value="{{addOneValue}}"></oj-input-text>
+            <oj-label for="input-add2">Address 2</oj-label>
+            <oj-input-text id="input-add2" value="{{addTwoValue}}"></oj-input-text>
+            <oj-label for="input-city" show-required>City</oj-label>
+            <oj-input-text id="input-city" value="{{cityValue}}"></oj-input-text>
+            <oj-label for="input-country" show-required>Country</oj-label>
+            <oj-select-single id="input-country" data="[[countryopt]]" value="{{countryValue}}"></oj-select-single>
+            <oj-form-layout max-columns="2" direction="row" label-edge="start" label-width="50%">
+              <oj-label for="input-state" show-required>State/Province</oj-label>
+              <oj-input-text id="input-state" value="{{provinceValue}}"></oj-input-text>
+              <oj-label for="input-postal" show-required>ZIP/Postal code</oj-label>
+              <oj-input-text id="input-postal" value="{{ZipValue}}"></oj-input-text>
+            </oj-form-layout>
+            <oj-label for="input-timeZone" show-required>Time Zone</oj-label>
+            <oj-select-single id="input-timeZone" data="[[timeZoneopt]]" value="Select TimeZone"></oj-select-single>
+            <oj-label for="input-Phone" show-required>Phone</oj-label>
+            <oj-input-text id="input-Phone" value="{{phoneValue}}"></oj-input-text>
+            <oj-label for="input-fax" show-required>Fax</oj-label>
+            <oj-input-text id="input-fax" value="{{faxValue}}"></oj-input-text>
+            <oj-label for="input-email" show-required>Email</oj-label>
+            <oj-input-text id="input-email" value="{{emailValue}}"></oj-input-text>
+  
+          </oj-form-layout>
+        </oj-bind-if>
+  
+        <oj-bind-if test="[[selectedStepValue() === 'stp3']]">
+          <div class="oj-flex">
+            <div class="oj-flex-item">
+              <oj-button chroming="solid" class="oj-button-sm">
+                <span>
+                  Create Shipment
+                </span>
+              </oj-button>
+  
+              <oj-menu-button chroming="solid" class="oj-button-sm oj-sm-margin-2x-horizontal" disabled="true">
+                <span>
+                  <!-- <oj-bind-text value="[[currentChromingLabel]]"></oj-bind-text> -->
+                  Edit Shipment
+                </span>
+                <oj-menu slot="menu">
+                  <oj-bind-for-each data="[[menuItems]]">
+                    <template>
+                      <oj-option value="[[$current.data.label]]" :id="[[$current.data.id]]">
+                        <oj-bind-if test="[[$current.data.icon]]">
+                          <span slot="startIcon" :class="[[$current.data.icon]]"></span>
+                        </oj-bind-if>
+                        <oj-bind-text value="[[$current.data.label]]"></oj-bind-text>
+                      </oj-option>
+                    </template>
+                  </oj-bind-for-each>
+                </oj-menu>
+              </oj-menu-button>
+            </div>
+            <oj-form-layout direction="row" max-columns="3" class="oj-flex-item">
+              <oj-input-search id="searchShipment" class="oj-form-control-max-width-sm" value="{{shipmentValue}}"
+                placeholder="search by shipment Id" aria-label="My search field">
+              </oj-input-search>
+              <oj-input-search id="searchShipment" class="oj-form-control-max-width-sm" value="{{recordValue}}"
+                placeholder="search by record" aria-label="My search field">
+              </oj-input-search>
+              <oj-select-single label-hint="Filter by status" value="{{filterstatusValue}}"
+                class="oj-form-control-max-width-sm"></oj-select-single>
+            </oj-form-layout>
+          </div>
+          <oj-table id="shipmenttable" aria-label="Shipment Table" accessibility.row-header="site" data="[[dataprovider]]"
+            scroll-policy="loadMoreOnScroll" columns-default='{"sortable": "disabled"}' columns={{columnsArray}}
+            class="demo-table-container">
+  
+            <template slot="cellTemplate" data-oj-as="cell" class="demo-table-TrackingNumber-cell oj-link-standalone">
+              <a href="">Click to add</a>
+            </template>
+  
+          </oj-table>
+  
+  
+        </oj-bind-if>
+  
+      </oj-validation-group>
+      <oj-bind-if test="[[selectedStepValue() === 'stp4']]">
+        <h3>Click Submit to save data</h3>
+        <div class="oj-flex-bar oj-sm-margin-4x-vertical">
+          <oj-button id="finishBtn" class="oj-flex-bar-center" chroming="callToAction" on-oj-action="[[finish]]">
+            Finish
+          </oj-button>
+        </div>
+      </oj-bind-if>
+  
+      <!---------Buttons------->
+      <div class="oj-flex  oj-sm-justify-content-space-between">
+        <div class=" oj-flex-item">
+          <oj-button id="PreviousStep" class="demo-default-train-step" on-oj-action="[[previousStep]]"
+            disabled="[[selectedStepValue() == 'stp1']]">
+            Back
+          </oj-button>
+          <oj-button id="PreviousStep" class="demo-default-train-step" on-oj-action="[[cancelStep]]">
+            Cancel
+          </oj-button>
+        </div>
+        <div class="oj-flex-item">
+          <oj-button id="NextStep" class="demo-default-train-step" on-oj-action="[[nextStep]]"
+            disabled="[[selectedStepValue() == 'stp4']]">
+            Next
+          </oj-button>
+        </div>
+    
+      </div>
+  
+    </div>
+    
+  
+  
+  </div>
