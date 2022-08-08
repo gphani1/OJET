@@ -7,9 +7,9 @@
 
  <!-------Admin page routing part------>
 <div class="oj-hybrid-padding">
-  <div id="admincontent"  class="demo-padding demo-container">
-    <div id="componentDemoContent" style="width: 1px; min-width: 100%;">
-      <div id="routingcontainer" class="ojflex">
+  <div id="admincontent"  class= "demo-padding demo-container oj-flex oj-flex-item">
+    <div id="componentDemoContent" style="width: 1px; min-width: 100%;">  
+      <div id="routingcontainer" class=" oj-flex  oj-flex-item">
         <oj-navigation-list edge="start" data="[[childdataProvider]]" selection="{{selection.path}}">
           <template slot="itemTemplate" data-oj-as="item">
             <oj-bind-if test="[[item.data.detail]]">
@@ -22,13 +22,12 @@
           </template>
         </oj-navigation-list>
       </div>
-      <div id="pageContent" class="oj-panel oj-bg-info-30">
+      <div id="pageContent" class="oj-panel oj-bg-info-30  oj-flex oj-flex-item  "><!--oj-flex-item-->
         <oj-module
-          config="[[childmodule.koObservableConfig]]"
-         
-          class="oj-flex demo-module"></oj-module>
-      </div>
-
+          config="[[childModule.koObservableConfig]]" 
+          class="oj-flex   demo-module"></oj-module>
+      </div>  <!--oj-flex -->
     </div>
+    
   </div>
 </div>

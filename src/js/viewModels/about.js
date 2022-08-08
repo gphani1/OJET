@@ -8,9 +8,9 @@
 /*
  * Your about ViewModel code goes here
  */
-define(['../accUtils',"require", "exports","ojs/ojcorerouter", "knockout", "ojs/ojbootstrap","ojs/ojarraydataprovider","ojs/ojmodulerouter-adapter",
+define(["require", "exports","ojs/ojcorerouter", "knockout", "ojs/ojbootstrap","ojs/ojarraydataprovider","ojs/ojmodulerouter-adapter",
 "ojs/ojknockoutrouteradapter","ojs/ojurlparamadapter","ojs/ojknockout","ojs/ojnavigationlist","ojs/ojmodule-element"],
- function(accUtils,require, exports, CoreRouter, ko, Bootstrap,ArrayDataProvider,ModuleRouterAdapter,KnockoutRouterAdapter,UrlParamAdapter,) {
+ function(require, exports, CoreRouter, ko, Bootstrap,ArrayDataProvider,ModuleRouterAdapter,KnockoutRouterAdapter,UrlParamAdapter,) {
     class AboutViewModel {
       constructor(args){
         this.args = args
@@ -32,9 +32,9 @@ define(['../accUtils',"require", "exports","ojs/ojcorerouter", "knockout", "ojs/
       self.childRouter = this.args.parentRouter.createChildRouter(self.childRoutes)
 
       // Create ModuleRouterAdapter instance
-      self.childmodule = new ModuleRouterAdapter(self.childRouter,{
+      self.childModule = new ModuleRouterAdapter(self.childRouter,{
         viewPath: "views/admin/",
-        viewModulePath:"viewModels/admin/",
+        viewModelPath:"viewModels/admin/" ,
       });
 
       
@@ -42,21 +42,7 @@ define(['../accUtils',"require", "exports","ojs/ojcorerouter", "knockout", "ojs/
        self.selection = new KnockoutRouterAdapter(self.childRouter);
        // Synchronize the router, causing it to go to its default route
        self.childRouter.sync();
-    
-
-
-          
-
-
-
     }
-
-    /*
-     * Returns an instance of the ViewModel providing one instance of the ViewModel. If needed,
-     * return a constructor for the ViewModel so that the ViewModel is constructed
-     * each time the view is displayed.
-     */
-   // return AboutViewModel;
   }
   return AboutViewModel;
  }

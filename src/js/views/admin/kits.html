@@ -1,0 +1,97 @@
+<!--
+ Copyright (c) 2014, 2022, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+ <div class = "hybridPadding " >
+  <div >
+    <oj-menu-button chroming="solid" class="oj-button-sm">
+      <span>
+        <!-- <oj-bind-text value="[[currentChromingLabel]]"></oj-bind-text> -->
+        Create Kit Type
+      </span>
+      <oj-menu slot="menu">
+        <oj-bind-for-each data="[[menuItems]]">
+          <template>
+            <oj-option value="[[$current.data.label]]" :id="[[$current.data.id]]">
+              <oj-bind-if test="[[$current.data.icon]]">
+                <span slot="startIcon" :class="[[$current.data.icon]]"></span>
+              </oj-bind-if>
+              <oj-bind-text value="[[$current.data.label]]"></oj-bind-text>
+            </oj-option>
+          </template>
+        </oj-bind-for-each>
+      </oj-menu>
+    </oj-menu-button>
+
+    <oj-button chroming="solid" class="oj-button-sm">
+      <span>
+        Create Kit Type Titration
+      </span>
+    </oj-button>
+  </div>
+  <div class = "oj-flex">
+    <oj-bind-for-each data=[[kitsDataProvider]]>
+      <template>
+        <div class="oj-panel oj-sm-margin-2x demo-mypanel">
+          <div class=" oj-flex oj-flex-item oj-bg-neutral-30" >
+            <div class="oj-flex-item oj-sm-margin-4x-horizontal oj-sm-margin-3x-vertical">Kit A</div> 
+            <div class="oj-flex-item">
+              <oj-button display="icons" chroming="borderless">
+                <span slot="startIcon" class="oj-ux-ico-edit"></span>
+              </oj-button>
+              <oj-button display="icons" chroming="borderless">
+                <span slot='startIcon' class="oj-ux-ico-delete-all"></span>
+              </oj-button>
+            </div>
+          </div>
+
+          <div class="oj-flex  oj-sm-flex-direction-column">
+            <div class=" oj-flex oj-flex-item">
+              <div class="oj-typography-body-sm">Distribution:</div>
+              <div class="oj-typography-body-sm">
+                <oj-bind-text value="[[distributionValue]]"></oj-bind-text>
+              </div>
+            </div>
+            <div class=" oj-flex oj-flex-item">
+              <div class="oj-typography-body-sm ">Description:</div>
+              <div class="oj-typography-body-sm">
+                <oj-bind-text value="[[descriptionnValue]]"></oj-bind-text>
+              </div>
+            </div>
+            <div class=" oj-flex oj-flex-item">
+              <div class="oj-typography-body-sm  ">Storage:</div>
+              <div class="oj-typography-body-sm">
+                <oj-bind-text value="[[storageValue]]"></oj-bind-text>
+              </div>
+            </div>
+            <div class=" oj-flex oj-flex-item">
+              <div class="oj-typography-body-sm  ">Type:</div>
+              <div class="oj-typography-body-sm">
+                <oj-bind-text value="[[typeValue]]"></oj-bind-text>
+              </div>
+            </div>
+            <div class="oj-flex oj-flex-item">
+              <div class="oj-typography-body-sm  ">Min kits to ship:</div>
+              <div class="oj-typography-body-sm">
+                <oj-bind-text value="[[minkitsValue]]"></oj-bind-text>
+              </div>
+            </div>
+            <div class=" oj-flex oj-flex-item">
+              <div class="oj-typography-body-sm  ">Units per Kit:</div>
+              <div class="oj-typography-body-sm">
+                <oj-bind-text value="[[unitsValue]]"></oj-bind-text>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </template>
+    </oj-bind-for-each>
+
+  </div>
+
+
+
+</div>
