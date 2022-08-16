@@ -39,12 +39,15 @@ define(["require", "exports", "knockout", "ojs/ojbootstrap","text!../../Modal/ro
         {
           headerText: 'Study role',
           field: 'role',
-          id: 'roleId'
+          id: 'roleId',
+          width:'30rem',
         },
         {
           headerText: 'Type',
           field: 'Type',
-          id: 'typeId'
+          id: 'typeId',
+          width:'30rem'
+          
         }
       ]
      })

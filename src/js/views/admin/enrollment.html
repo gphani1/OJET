@@ -1,0 +1,75 @@
+<!--
+ Copyright (c) 2014, 2022, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+
+ <div class = "hybridPadding" >
+    <div id="tableWrapper">
+      <oj-table id="table"  aria-label="Tasks Table" data="[[dataProvider]]" display='grid' layout="fixed" columns-default.sortable="disabled"
+      columns='[
+      {"headerText":"Enrollment open/closed","field":"enrollment","id":"enrollment","minWidth": "10rem"},
+      {"headerText":"Screening Limits","field":"screening","id":"screening"},
+      {"headerText":"Randomized Limits","field":"randomized","id":"randomized"},
+      {"headerText":"Notification","field":"notification","id":"notification"}
+      
+      ]' class="demo-table-container " >
+  
+      <template slot="rowTemplate" data-oj-as="row">
+        <tr>
+          <td>
+           
+            <oj-row-expander data-oj-clickthrough="disabled" context="[[row]]" > <oj-switch value="true" ></oj-switch></oj-row-expander>
+            
+            <span class="oj-sm-margin-5x-start">
+              <oj-bind-text value="[[row.item.data.enrollment]]" ></oj-bind-text>
+            </span>
+            
+          </td>
+          <td>
+            <span minWidth="2rem" >
+              <oj-input-number value="[[row.item.data.screening]]" min="0" max="100" step="1" ></oj-input-number>
+            </span>
+          </td>
+          <td>
+            <span>
+              <oj-input-number value="[[row.item.data.randomized]]"  min="0" max="100" step="1" ></oj-input-number>
+            </span>
+          </td>
+          <td>
+            <span>
+              <oj-input-number value="[[row.item.data.notification]]"   min="0" max="100" step="1"></oj-input-number>
+            </span>
+          </td>
+          <!-- <td>
+            <template slot="cellimportTemplate" data-oj-as="cell" class="demo-table-TrackingNumber-cell oj-link-standalone">
+                <a href="">Import</a>
+            </template>
+          </td> -->
+          <!-- <td>
+            <template slot="actionTemplate" data-oj-as="cell">
+                <oj-menu-button chroming="borderless" display="icons" data-oj-clickthrough="disabled">
+                  Import
+                  <oj-menu slot="menu" on-oj-menu-action="[[menuListener]]">
+                    <oj-option value="approve" disabled="[[cell.row.Status === 'Approved']]">
+                      <span class="oj-ux-ico-check" slot="startIcon"></span>
+                      Approve
+                    </oj-option>
+                    <oj-option value="delete">
+                      <span class="oj-ux-ico-delete-circle" slot="startIcon"></span>
+                      Delete
+                    </oj-option>
+                  </oj-menu>
+                </oj-menu-button>
+            </template>
+          </td>
+           -->
+        </tr>
+  
+      </template>
+      
+  
+      </oj-table>
+    </div>
+  
+  </div>

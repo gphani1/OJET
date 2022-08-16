@@ -5,7 +5,7 @@
 
     <!-- <span ></span> -->
       <oj-select-single id="selecttype" label-hint="Filter by type" label-edge="inside"
-      class="oj-form-control-max-width-sm " data="[[filteropt]]" value="{{selectVal}}"></oj-select-single>
+      class="oj-form-control-max-width-sm " data="[[filteropt]]" value="{{selectVal}}" ></oj-select-single>
     
     <!-- <span></span> -->
       <oj-select-single id="selectstatus" label-hint="Filter by status" label-edge="inside"
@@ -22,8 +22,8 @@
 
   <div class="oj-panel oj-flex ">
     <oj-table id="table" aria-label="study Table" accessibility.row-header="typeId" class="demo-table-container"
-      data="[[dataprovider]]" columns-default.sortable="disabled" scroll-policy="loadMoreOnScroll"
-      columns="{{tableColumns}}" scroll-policy-options='{"fetchSize": 100}'>
+      data="[[dataprovider]]" columns-default.sortable="disabled" display='grid'
+      columns="{{tableColumns}}"  class="demo-table-container oj-table-stretch"  >
     </oj-table>
   </div>
 

@@ -1,0 +1,350 @@
+[
+    {
+        "id": "t1",
+        "enrollment": "Study Total",
+        "screening": 100,
+        "randomized": 100,
+        "notification": 100,
+         "TrackingNumber": "Click to add",
+        "children":[
+            {
+                "id":"t1:1",
+                "enrollment":"India",
+                "screening":100,
+                "randomized":100,
+                "notification":0
+
+            },
+            {
+                "id":"t1:2",
+                "enrollment":"United States",
+                "screening":100,
+                "randomized":100,
+                "notification":0
+            }
+        ]
+    },
+    {
+        "id": "t2",
+        "enrollment": "Site total",
+        "screening": 100,
+        "randomized": 100,
+        "notification": 100,
+        "Import":"Import"
+    },
+    {
+        "id": "t3",
+        "enrollment": "Country",
+        "screening": 100,
+        "randomized": 100,
+        "notification": 100,
+         "TrackingNumber": "Click to add",
+        "children":[
+            {
+                "id":"t3:1",
+                "enrollment":"India",
+                "screening":100,
+                "randomized":100,
+                "notification":0
+
+            },
+            {
+                "id":"t3:2",
+                "enrollment":"United States",
+                "screening":100,
+                "randomized":100,
+                "notification":0
+            }
+        ]
+    },
+    {
+        "id": "t4",
+        "enrollment": "Country",
+        "screening": 100,
+        "randomized": 100,
+        "notification": 100,
+         "TrackingNumber": "Click to add",
+        "children":[
+            {
+                "id":"t4:1",
+                "enrollment":"India",
+                "screening":100,
+                "randomized":100,
+                "notification":0
+
+            },
+            {
+                "id":"t4:2",
+                "enrollment":"United States",
+                "screening":100,
+                "randomized":100,
+                "notification":0
+            }
+        ]
+    },
+    {
+        "id": "t5",
+        "enrollment": "Country",
+        "screening": 100,
+        "randomized": 100,
+        "notification": 100,
+         "TrackingNumber": "Click to add",
+        "children":[
+            {
+                "id":"t5:1",
+                "enrollment":"India",
+                "screening":100,
+                "randomized":100,
+                "notification":0
+
+            },
+            {
+                "id":"t5:2",
+                "enrollment":"United States",
+                "screening":100,
+                "randomized":100,
+                "notification":0
+            }
+        ]
+    },
+    {
+        "id": "t6",
+        "enrollment": "Country",
+        "screening": 100,
+        "randomized": 100,
+        "notification": 100,
+        "children":[
+            {
+                "id":"t6:1",
+                "enrollment":"India",
+                "screening":100,
+                "randomized":100,
+                "notification":0
+
+            },
+            {
+                "id":"t6:2",
+                "enrollment":"United States",
+                "screening":100,
+                "randomized":100,
+                "notification":0
+            }
+        ]
+    },
+    {
+        "id": "t7",
+        "enrollment": "Country",
+        "screening": 100,
+        "randomized": 100,
+        "notification": 100,
+        "children":[
+            {
+                "id":"t7:1",
+                "enrollment":"India",
+                "screening":100,
+                "randomized":100,
+                "notification":0
+
+            },
+            {
+                "id":"t7:2",
+                "enrollment":"United States",
+                "screening":100,
+                "randomized":100,
+                "notification":0
+            }
+        ]
+    },
+    {
+        "id": "t8",
+        "enrollment": "Country",
+        "screening": 100,
+        "randomized": 100,
+        "notification": 100,
+        "children":[
+            {
+                "id":"t8:1",
+                "enrollment":"India",
+                "screening":100,
+                "randomized":100,
+                "notification":0
+
+            },
+            {
+                "id":"t8:2",
+                "enrollment":"United States",
+                "screening":100,
+                "randomized":100,
+                "notification":0
+            }
+        ]
+    },
+    {
+        "id": "t9",
+        "enrollment": "Country",
+        "screening": 100,
+        "randomized": 100,
+        "notification": 100,
+        "children":[
+            {
+                "id":"t9:1",
+                "enrollment":"India",
+                "screening":100,
+                "randomized":100,
+                "notification":0
+
+            },
+            {
+                "id":"t9:2",
+                "enrollment":"United States",
+                "screening":100,
+                "randomized":100,
+                "notification":0
+            }
+        ]
+    },
+    {
+        "id": "t10",
+        "enrollment": "Country",
+        "screening": 100,
+        "randomized": 100,
+        "notification": 100,
+        "children":[
+            {
+                "id":"t10:1",
+                "enrollment":"India",
+                "screening":100,
+                "randomized":100,
+                "notification":0
+
+            },
+            {
+                "id":"t10:2",
+                "enrollment":"United States",
+                "screening":100,
+                "randomized":100,
+                "notification":0
+            }
+        ]
+    },
+    {
+        "id": "t11",
+        "enrollment": "Country",
+        "screening": 100,
+        "randomized": 100,
+        "notification": 100,
+        "children":[
+            {
+                "id":"t11:1",
+                "enrollment":"India",
+                "screening":100,
+                "randomized":100,
+                "notification":0
+
+            },
+            {
+                "id":"t11:2",
+                "enrollment":"United States",
+                "screening":100,
+                "randomized":100,
+                "notification":0
+            }
+        ]
+    },
+    {
+        "id": "t12",
+        "enrollment": "Country",
+        "screening": 100,
+        "randomized": 100,
+        "notification": 100,
+        "children":[
+            {
+                "id":"t12:1",
+                "enrollment":"India",
+                "screening":100,
+                "randomized":100,
+                "notification":0
+
+            },
+            {
+                "id":"t12:2",
+                "enrollment":"United States",
+                "screening":100,
+                "randomized":100,
+                "notification":0
+            }
+        ]
+    },
+    {
+        "id": "t13",
+        "enrollment": "Country",
+        "screening": 100,
+        "randomized": 100,
+        "notification": 100,
+        "children":[
+            {
+                "id":"t13:1",
+                "enrollment":"India",
+                "screening":100,
+                "randomized":100,
+                "notification":0
+
+            },
+            {
+                "id":"t13:2",
+                "enrollment":"United States",
+                "screening":100,
+                "randomized":100,
+                "notification":0
+            }
+        ]
+    },
+    {
+        "id": "t14",
+        "enrollment": "Country",
+        "screening": 100,
+        "randomized": 100,
+        "notification": 100,
+        "children":[
+            {
+                "id":"t14:1",
+                "enrollment":"India",
+                "screening":100,
+                "randomized":100,
+                "notification":0
+
+            },
+            {
+                "id":"t14:2",
+                "enrollment":"United States",
+                "screening":100,
+                "randomized":100,
+                "notification":0
+            }
+        ]
+    },
+    {
+        "id": "t15",
+        "enrollment": "Country",
+        "screening": 100,
+        "randomized": 100,
+        "notification": 100,
+        "children":[
+            {
+                "id":"t15:1",
+                "enrollment":"India",
+                "screening":100,
+                "randomized":100,
+                "notification":0
+
+            },
+            {
+                "id":"t15:2",
+                "enrollment":"United States",
+                "screening":100,
+                "randomized":100,
+                "notification":0
+            }
+        ]
+    }
+]
