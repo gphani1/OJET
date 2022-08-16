@@ -110,7 +110,7 @@
                 </oj-menu>
               </oj-menu-button>
             </div>
-            <oj-form-layout direction="row" max-columns="3" class="oj-flex-item">
+            <oj-form-layout direction="row" max-columns="3" class="oj-flex-item" >
               <oj-input-search id="searchShipment" class="oj-form-control-max-width-sm" value="{{shipmentValue}}"
                 placeholder="search by shipment Id" aria-label="My search field">
               </oj-input-search>
@@ -121,9 +121,9 @@
                 class="oj-form-control-max-width-sm"></oj-select-single>
             </oj-form-layout>
           </div>
-          <oj-table id="shipmenttable" aria-label="Shipment Table" accessibility.row-header="site" data="[[dataprovider]]"
+          <oj-table id="shipmenttable" aria-label="Shipment Table" accessibility.row-header="site" data="[[dataprovider]]" class="demo-table-container "
             scroll-policy="loadMoreOnScroll" columns-default='{"sortable": "disabled"}' columns={{columnsArray}}
-            class="demo-table-container">
+            class="demo-table-container "  display='grid' >
   
             <template slot="cellTemplate" data-oj-as="cell" class="demo-table-TrackingNumber-cell oj-link-standalone">
               <a href="">Click to add</a>

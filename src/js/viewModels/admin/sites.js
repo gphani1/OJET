@@ -82,12 +82,12 @@ define([ "require", "exports", "knockout", "ojs/ojbootstrap", "ojs/ojasyncvalida
         
     ];
     this.columnsArray = [
-      {headerText: "Shipment Id", field: "ShipmentId",id:"shipId"},
-      {headerText: "Site", field: "Site",id: "site" ,},
-      {headerText: "Status", field: "Status",id: "site"},
-      {headerText: "Create Date", field: "createddate",id: "cdate"},
-      {headerText: "Ship Date", field: "ShipDate", id: "shipDate"},
-      {headerText: "Tracking Number", field: "TrackingNumber", id: "trackNum", template:'cellTemplate'}
+      {headerText: "Shipment Id", field: "ShipmentId",id:"shipId", "width":"20rem"},
+      {headerText: "Site", field: "Site",id: "site","width":"10rem"},
+      {headerText: "Status", field: "Status",id: "site","width":"10rem"},
+      {headerText: "Create Date", field: "createddate",id: "cdate",},
+      {headerText: "Ship Date", field: "ShipDate", id: "shipDate","width":"10rem"},
+      {headerText: "Tracking Number", field: "TrackingNumber", id: "trackNum", template:'cellTemplate',}
     ];
 
     this.dataprovider = new ArrayDataProvider(this.shipmentArray, {

@@ -18,7 +18,7 @@ define(["require", "exports","ojs/ojcorerouter", "knockout", "ojs/ojbootstrap","
       
 
       self.childRoutes = [
-        {path:" ",redirect:"kits"},
+        {path:' ',redirect:'kits'},
         {path:'kits',detail:{label:'Kits'}},
         {path:'branches',detail:{label:'Branches'}},
         {path:'enrollment',detail:{label:'Enrollment'}},

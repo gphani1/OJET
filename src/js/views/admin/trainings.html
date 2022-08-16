@@ -1,0 +1,126 @@
+<div class = "hybridPadding" >
+    <div id="container">
+      <div class="oj-sm-float-start oj-panel">
+        <div class="oj-sm-margin-2x-start ">
+          <span  class="oj-ux-ico-edit"></span>
+          Draft
+        </div>
+        <hr/>
+        <oj-list-view
+          id="source"
+          on-keydown="[[handleKeyCut]]"
+          aria-label="list drag source"
+          class="demo-list oj-listview-item-padding-off oj-bg-neutral-30 listcontainer "
+          data="[[sourceDataProvider]]"
+          dnd.drag.items.data-types='["application/ojlistviewitems+json"]'
+          dnd.drag.items.drag-start="[[handleDragStart]]"
+          dnd.drag.items.drag-end="[[handleDragEnd]]"
+          dnd.drop.items.data-types='["application/ojtablerows+json"]'>
+          <oj-menu slot="contextMenu" on-oj-menu-action="[[handleMenuCut]]">
+            <oj-option value="cut">Cut</oj-option>
+          </oj-menu>
+          <template slot="itemTemplate" data-oj-as="item">
+            <li :class="[[cutItem() === item.key ? 'demo-cut-item' : '']]">
+              <oj-list-item-layout>
+                <span class="oj-typography-body-md oj-text-color-primary">
+                  <oj-bind-text value="[[item.data.name]]"></oj-bind-text>
+                </span>
+               
+                <!-- <span slot="secondary" class="oj-typography-body-sm oj-text-color-secondary">
+                  <oj-bind-text value="[[item.data.title]]"></oj-bind-text>
+                </span> -->
+                <div
+                  slot="action"
+                  role="button"
+                  tabindex="0"
+                  class="oj-sm-margin-4x-horizontal oj-listview-drag-handle"></div>
+              </oj-list-item-layout>
+            </li>
+          </template>
+        </oj-list-view>
+      </div>
+  
+      <div class="oj-sm-float-start oj-sm-margin-4x-start oj-panel">
+        <div class="oj-sm-margin-2x-start ">Testing</div>
+        <hr/>
+        <oj-list-view
+          id="target"
+          on-keydown="[[handleKeyPaste]]"
+          aria-label="list drop target"
+          class="demo-list oj-listview-item-padding-off oj-bg-neutral-30 listcontainer"
+          data="[[targetDataProvider]]"
+          dnd.drop.items.data-types='["application/ojlistviewitems+json"]'
+          dnd.drop.items.drop="[[handleDrop]]">
+          <oj-menu slot="contextMenu" on-oj-menu-action="[[handleMenuPaste]]">
+            <oj-option value="paste" disabled="[[cutItem() == null]]">Paste</oj-option>
+          </oj-menu>
+          <template slot="itemTemplate" data-oj-as="item">
+            <oj-list-item-layout>
+              <span class="oj-typography-body-md oj-text-color-primary">
+                <oj-bind-text value="[[item.data.name]]"></oj-bind-text>
+              </span>
+              
+            </oj-list-item-layout>
+          </template>
+        </oj-list-view>
+      </div>
+  
+      <div class="oj-sm-float-start oj-sm-margin-4x-start oj-panel">
+        <div class="oj-sm-margin-2x-start ">Approved</div>
+        <hr/>
+        <oj-list-view
+          id="target"
+          on-keydown="[[handleKeyPaste]]"
+          aria-label="list drop target"
+          class="demo-list oj-listview-item-padding-off oj-bg-neutral-30 listcontainer"
+          data="[[targetDataProvider]]"
+          dnd.drop.items.data-types='["application/ojlistviewitems+json"]'
+          dnd.drop.items.drop="[[handleDrop]]">
+          <oj-menu slot="contextMenu" on-oj-menu-action="[[handleMenuPaste]]">
+            <oj-option value="paste" disabled="[[cutItem() == null]]">Paste</oj-option>
+          </oj-menu>
+          <template slot="itemTemplate" data-oj-as="item">
+            <oj-list-item-layout>
+              <span class="oj-typography-body-md oj-text-color-primary">
+                <oj-bind-text value="[[item.data.name]]"></oj-bind-text>
+              </span>
+              
+            </oj-list-item-layout>
+          </template>
+        </oj-list-view>
+      </div>
+  
+      <!---Archived-->
+      <div class="oj-sm-float-start oj-sm-margin-4x-start oj-panel">
+        <div class="oj-sm-margin-2x-start">Archived</div>
+        <hr/>
+        <oj-list-view
+          id="target"
+          on-keydown="[[handleKeyPaste]]"
+          on-keydown="[[handleKeyCut]]"
+          aria-label="list drop target"
+          class="demo-list oj-listview-item-padding-off listcontainer"
+          data="[[targetDataProvider]]"
+          dnd.drag.items.data-types='["application/ojlistviewitems+json"]'
+          dnd.drag.items.drag-start="[[handleDragStart]]"
+          dnd.drag.items.drag-end="[[handleDragEnd]]"
+          dnd.drop.items.data-types='["application/ojlistviewitems+json"]'
+          dnd.drop.items.drop="[[handleDrop]]">
+          <oj-menu slot="contextMenu" on-oj-menu-action="[[handleMenuPaste]]" on-oj-menu-action="[[handleMenuCut]]">
+            <oj-option value="paste" disabled="[[cutItem() == null]]">Paste</oj-option>
+          </oj-menu>
+          <template slot="itemTemplate" data-oj-as="item">
+            <li :class="[[cutItem() === item.key ? 'demo-cut-item' : '']]">
+            <oj-list-item-layout>
+              <span class="oj-typography-body-md oj-text-color-primary">
+                <oj-bind-text value="[[item.data.name]]"></oj-bind-text>
+              </span>
+              
+            </oj-list-item-layout>
+            </li>
+          </template>
+        </oj-list-view>
+      </div>
+    </div>
+  
+  </div>
